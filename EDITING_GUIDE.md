@@ -46,7 +46,8 @@ grep -n 'PLACEHOLDER' index.html
 | `PROJECT_TITLE_PLACEHOLDER` | 23 | 页面大标题（H1） |
 | `AUTHOR_1_URL_PLACEHOLDER` … `AUTHOR_3_URL_PLACEHOLDER` | 26–28 | 每位作者的个人主页链接；把 `Author One / Two / Three` 也改成真实姓名 |
 | `ADVISOR_URL_PLACEHOLDER` | 29 | 指导老师个人主页；把 `Advisor Name` 也改成真实姓名 |
-| `ARXIV_URL_PLACEHOLDER` | 39 | arXiv 链接（没有的话把整个 `<a>…</a>` 删掉即可） |
+| Paper 按钮 (第 37 行) | — | 链接已指向 `./static/pdfs/paper.pdf`。把课程 Paper 导出 PDF 后放到那个路径，文件名用 `paper.pdf` 即可生效 |
+| Slides 按钮 (第 40 行) | — | 链接已指向 `./static/pdfs/PhysFields.pdf`。把 Presentation slides 导出 PDF 后放到那个路径 |
 | `GITHUB_CODE_URL_PLACEHOLDER` | 40 | 代码仓库链接（可以就填 `https://github.com/daijun10086/PhysFields`，或另一个代码仓库） |
 | `VIDEO_URL_PLACEHOLDER` | 41 | YouTube/Bilibili 讲解视频链接（没有的话删掉整个 `<a>`） |
 
