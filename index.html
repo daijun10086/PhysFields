@@ -69,9 +69,9 @@
   <section>
     <h2>Method</h2>
     <figure>
-      <img src="./static/images/pipeline_placeholder.svg" alt="Pipeline placeholder">
+      <img src="./static/images/method-pipeline.png" alt="PhysFields pipeline">
       <figcaption>
-        PIPELINE_CAPTION_PLACEHOLDER — describe the pipeline in one or two sentences.
+        Given a single input video, we extract the first frame, recover Object Gaussians via 3D Gaussian Splatting pre-training, and initialize the Material Field with a VLM. The Material Field and Force Field are jointly fed to a differentiable MPM solver, whose output drives time-varying Simulated Gaussians <i>gs(t, m, f)</i>; a pixel-level Reconstruction Loss against the input video back-propagates through the entire pipeline, optimizing both material and force fields end-to-end.
       </figcaption>
     </figure>
   </section>
