@@ -117,4 +117,63 @@
 
   // ---------- Boot ----------
   loadCase(current);
+
+  // =====================================================================
+  // Dual viewers (Comparison section): one divider, two videos each.
+  // Same hover-to-engage interaction as the triple viewer.
+  // =====================================================================
+  document.querySelectorAll('.dual-viewer').forEach(initDualViewer);
+
+  function initDualViewer(view) {
+    const stage    = view.querySelector('.dual-stage');
+    const force    = view.querySelector('.v-force');
+    const material = view.querySelector('.v-material');
+    const divider  = view.querySelector('.divider-split');
+    if (!stage || !force || !material || !divider) return;
+
+    const forceFile    = view.dataset.force;
+    const materialFile = view.dataset.material;
+    if (forceFile)    force.src    = './static/videos/' + forceFile;
+    if (materialFile) material.src = './static/videos/' + materialFile;
+    [force, material].forEach((v) => {
+      v.load();
+      const p = v.play();
+      if (p && p.catch) p.catch(() => {});
+    });
+
+    let dualActive = false;
+
+    function pctFrom(clientX) {
+      const r = stage.getBoundingClientRect();
+      return Math.max(0, Math.min(100, ((clientX - r.left) / r.width) * 100));
+    }
+
+    divider.addEventListener('pointerenter', () => {
+      dualActive = true;
+      divider.classList.add('active');
+    });
+
+    stage.addEventListener('pointermove', (e) => {
+      if (!dualActive) return;
+      stage.style.setProperty('--split', pctFrom(e.clientX) + '%');
+    });
+
+    function release() {
+      dualActive = false;
+      divider.classList.remove('active');
+    }
+    stage.addEventListener('pointerleave', release);
+    stage.addEventListener('pointerup',     release);
+    stage.addEventListener('pointercancel', release);
+
+    divider.addEventListener('click', (e) => e.preventDefault());
+
+    // Keep the two videos in lockstep (force is master).
+    setInterval(() => {
+      if (force.paused || force.readyState < 2) return;
+      if (material.readyState < 2 || material.seeking) return;
+      const t = force.currentTime;
+      if (Math.abs(material.currentTime - t) > 0.1) material.currentTime = t;
+    }, 400);
+  }
 })();
