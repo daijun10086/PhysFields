@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css?v=5">
+  <link rel="stylesheet" href="./static/css/index.css?v=6">
   <link rel="icon" type="image/png" href="./static/images/tab-icon.png">
 
-  <script src="./static/js/results-viewer.js?v=5" defer></script>
+  <script src="./static/js/results-viewer.js?v=6" defer></script>
 </head>
 <body>
 
@@ -126,57 +126,52 @@
 
   <hr>
 
-  <!-- ============ Reconstructed Fields ============ -->
+  <!-- ============ Reconstructed Materials Field ============ -->
   <section>
-    <h2>Reconstructed Force and Materials Field Visualization</h2>
-
-    <div class="comparison-grid">
-      <div class="dual-viewer" data-force="force_narrative-carnation.mp4" data-material="material_narrative-carnations.mp4">
-        <h3 class="scene-title">Carnation</h3>
-        <div class="dual-stage">
-          <video class="vlayer v-force"    autoplay muted loop playsinline preload="auto"></video>
-          <video class="vlayer v-material" autoplay muted loop playsinline preload="auto"></video>
-          <div class="pane-label label-force">Force</div>
-          <div class="pane-label label-material">Materials</div>
-          <div class="divider divider-split" role="slider" aria-label="Divider"></div>
-        </div>
-      </div>
-
-      <div class="dual-viewer" data-force="force_narrative-hat.mp4" data-material="material_narrative-hat.mp4">
-        <h3 class="scene-title">Hat</h3>
-        <div class="dual-stage">
-          <video class="vlayer v-force"    autoplay muted loop playsinline preload="auto"></video>
-          <video class="vlayer v-material" autoplay muted loop playsinline preload="auto"></video>
-          <div class="pane-label label-force">Force</div>
-          <div class="pane-label label-material">Materials</div>
-          <div class="divider divider-split" role="slider" aria-label="Divider"></div>
-        </div>
-      </div>
-
-      <div class="dual-viewer" data-force="force_narrative-alocasia.mp4" data-material="material_narrative-alocasia.mp4">
-        <h3 class="scene-title">Alocasia</h3>
-        <div class="dual-stage">
-          <video class="vlayer v-force"    autoplay muted loop playsinline preload="auto"></video>
-          <video class="vlayer v-material" autoplay muted loop playsinline preload="auto"></video>
-          <div class="pane-label label-force">Force</div>
-          <div class="pane-label label-material">Materials</div>
-          <div class="divider divider-split" role="slider" aria-label="Divider"></div>
-        </div>
-      </div>
-
-      <div class="dual-viewer" data-force="force_narrative-telephone.mp4" data-material="material_narrative-telephone.mp4">
-        <h3 class="scene-title">Telephone</h3>
-        <div class="dual-stage">
-          <video class="vlayer v-force"    autoplay muted loop playsinline preload="auto"></video>
-          <video class="vlayer v-material" autoplay muted loop playsinline preload="auto"></video>
-          <div class="pane-label label-force">Force</div>
-          <div class="pane-label label-material">Materials</div>
-          <div class="divider divider-split" role="slider" aria-label="Divider"></div>
-        </div>
-      </div>
+    <h2>Reconstructed Materials Field Visualization</h2>
+    <div class="field-grid">
+      <figure class="field-tile">
+        <video src="./static/videos/material_narrative-carnations.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Carnation</figcaption>
+      </figure>
+      <figure class="field-tile">
+        <video src="./static/videos/material_narrative-hat.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Hat</figcaption>
+      </figure>
+      <figure class="field-tile">
+        <video src="./static/videos/material_narrative-alocasia.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Alocasia</figcaption>
+      </figure>
+      <figure class="field-tile">
+        <video src="./static/videos/material_narrative-telephone.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Telephone</figcaption>
+      </figure>
     </div>
+  </section>
 
-    <p class="caption">Hover over the vertical handle in each tile to slide it and compare Force vs Materials fields.</p>
+  <hr>
+
+  <!-- ============ Reconstructed Force Field ============ -->
+  <section>
+    <h2>Reconstructed Force Field Visualization</h2>
+    <div class="field-grid">
+      <figure class="field-tile">
+        <video src="./static/videos/force_narrative-carnation.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Carnation</figcaption>
+      </figure>
+      <figure class="field-tile">
+        <video src="./static/videos/force_narrative-hat.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Hat</figcaption>
+      </figure>
+      <figure class="field-tile">
+        <video src="./static/videos/force_narrative-alocasia.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Alocasia</figcaption>
+      </figure>
+      <figure class="field-tile">
+        <video src="./static/videos/force_narrative-telephone.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <figcaption>Telephone</figcaption>
+      </figure>
+    </div>
   </section>
 
   <hr>

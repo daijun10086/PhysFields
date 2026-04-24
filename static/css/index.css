@@ -140,8 +140,8 @@ p.caption {
   main { padding: 2rem 1rem 3rem; }
 }
 
-/* ---------- Dual Viewer Grid (Comparison) ---------- */
-.comparison-grid {
+/* ---------- Field Visualization Grid ---------- */
+.field-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
@@ -149,44 +149,28 @@ p.caption {
 }
 
 @media (max-width: 640px) {
-  .comparison-grid { grid-template-columns: 1fr; }
+  .field-grid { grid-template-columns: 1fr; }
 }
 
-.dual-viewer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
+.field-tile { margin: 0; }
 
-.scene-title {
-  font-family: 'Google Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  text-align: center;
-  margin: 0;
-}
-
-.dual-stage {
-  position: relative;
+.field-tile video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
   border-radius: 6px;
-  overflow: hidden;
-  user-select: none;
-  touch-action: none;
-  --split: 50%;
+  object-fit: cover;
 }
 
-.dual-stage .vlayer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.dual-stage .v-force    { clip-path: inset(0 calc(100% - var(--split)) 0 0); }
-.dual-stage .v-material { clip-path: inset(0 0 0 var(--split)); }
-
-.dual-stage .label-force    { left: 0.6rem; }
-.dual-stage .label-material { left: calc(var(--split) + 0.6rem); }
-
-.dual-stage .divider-split { left: var(--split); }
+.field-tile figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
 
 /* ---------- Triple Viewer (Results) ---------- */
 .triple-viewer {
