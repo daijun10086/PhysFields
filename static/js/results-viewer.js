@@ -17,7 +17,7 @@
   const indicator = document.getElementById('case-indicator');
 
   // Case 1..4 maps to these scene names (displayed in the caption).
-  const CASE_NAMES = ['Carnation', 'Hat', 'alocasia', 'Telephone'];
+  const CASE_NAMES = ['Carnation', 'Hat', 'Alocasia', 'Telephone'];
   const TOTAL      = CASE_NAMES.length;
   const MIN_GAP    = 4;         // minimum horizontal gap between handles, %
   let   current    = parseInt(viewer.dataset.case, 10) || 1;
