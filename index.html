@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" type="image/png" href="./static/images/tab-icon.png">
+
+  <script src="./static/js/results-viewer.js" defer></script>
 </head>
 <body>
 
@@ -93,24 +95,33 @@
   <!-- ============ Qualitative Results ============ -->
   <section>
     <h2>Results</h2>
-    <div class="grid-2">
-      <figure>
-        <img src="./static/images/result_1_placeholder.svg" alt="Result 1 placeholder">
-        <figcaption>RESULT_1_CAPTION_PLACEHOLDER</figcaption>
-      </figure>
-      <figure>
-        <img src="./static/images/result_2_placeholder.svg" alt="Result 2 placeholder">
-        <figcaption>RESULT_2_CAPTION_PLACEHOLDER</figcaption>
-      </figure>
-      <figure>
-        <img src="./static/images/result_3_placeholder.svg" alt="Result 3 placeholder">
-        <figcaption>RESULT_3_CAPTION_PLACEHOLDER</figcaption>
-      </figure>
-      <figure>
-        <img src="./static/images/result_4_placeholder.svg" alt="Result 4 placeholder">
-        <figcaption>RESULT_4_CAPTION_PLACEHOLDER</figcaption>
-      </figure>
+
+    <div class="triple-viewer" id="results-viewer" data-case="1" data-total="4">
+      <button class="nav-btn nav-prev" type="button" aria-label="Previous case">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="viewer-stage">
+        <video class="vlayer v-render" data-role="render" autoplay muted loop playsinline preload="auto"></video>
+        <video class="vlayer v-gt"     data-role="gt"     autoplay muted loop playsinline preload="auto"></video>
+        <video class="vlayer v-error"  data-role="error"  autoplay muted loop playsinline preload="auto"></video>
+
+        <div class="pane-label label-render">Render</div>
+        <div class="pane-label label-gt">GT</div>
+        <div class="pane-label label-error">Error</div>
+
+        <div class="divider divider-left"  data-side="left"  role="slider" aria-label="Left divider"></div>
+        <div class="divider divider-right" data-side="right" role="slider" aria-label="Right divider"></div>
+      </div>
+
+      <button class="nav-btn nav-next" type="button" aria-label="Next case">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
+
+    <p class="caption">
+      Case <span id="case-indicator">1</span> / 4 — drag the two vertical handles to compare Render / Ground Truth / Error.
+    </p>
   </section>
 
   <hr>
