@@ -96,6 +96,17 @@ hr {
   text-decoration: none;
 }
 
+.hero .code-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #c0392b;
+}
+
+.hero .code-note a {
+  color: #c0392b;
+  text-decoration: underline;
+}
+
 /* ---------- Sections ---------- */
 section h2 {
   font-size: 1.6rem;
