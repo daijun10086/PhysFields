@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360">
+  <rect width="1200" height="360" fill="#f5f7fb"/>
+  <g fill="#dbe3f1" stroke="#9ab0d4" stroke-width="1.5">
+    <rect x="80"   y="130" width="180" height="100" rx="10"/>
+    <rect x="340"  y="130" width="180" height="100" rx="10"/>
+    <rect x="600"  y="130" width="180" height="100" rx="10"/>
+    <rect x="860"  y="130" width="180" height="100" rx="10"/>
+  </g>
+  <g fill="#6b7a96" font-family="Google Sans, sans-serif" text-anchor="middle">
+    <text x="170"  y="186" font-size="18">Input</text>
+    <text x="430"  y="186" font-size="18">Module A</text>
+    <text x="690"  y="186" font-size="18">Module B</text>
+    <text x="950"  y="186" font-size="18">Output</text>
+    <text x="600"  y="60"  font-size="26" font-weight="700">PIPELINE PLACEHOLDER</text>
+    <text x="600"  y="310" font-size="16">Replace ./static/images/pipeline_placeholder.svg with your pipeline figure.</text>
+  </g>
+  <g stroke="#9ab0d4" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <defs>
+      <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L10,5 L0,10 z" fill="#9ab0d4"/>
+      </marker>
+    </defs>
+    <line x1="262" y1="180" x2="338" y2="180"/>
+    <line x1="522" y1="180" x2="598" y2="180"/>
+    <line x1="782" y1="180" x2="858" y2="180"/>
+  </g>
+</svg>
