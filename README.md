@@ -12,7 +12,7 @@ Nerfies / DreamFusion template.
 ├── static/
 │   ├── css/index.css           # Styles
 │   ├── images/                 # Placeholder SVGs (replace with your own assets)
-│   │   ├── favicon.svg
+│   │   ├── tab-icon.png
 │   │   ├── teaser_placeholder.svg
 │   │   ├── pipeline_placeholder.svg
 │   │   ├── result_1_placeholder.svg …
