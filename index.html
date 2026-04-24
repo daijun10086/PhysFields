@@ -71,9 +71,7 @@
   <section>
     <h2>Abstract</h2>
     <p>
-      ABSTRACT_PLACEHOLDER — one self-contained paragraph: what problem, what we
-      do, what's new, and the headline result (one or two numbers if you have them).
-      Aim for ~150–200 words. Keep it readable and direct.
+      Inferring the physics underlying visual motion is a fundamental goal of computer vision. Existing video-based inverse-physics methods typically recover either material properties or force fields, but not both jointly. We present a unified end-to-end differentiable framework for simultaneously recovering force fields and material fields from a single video. Our method starts from a 3D Gaussian Splatting reconstruction of the first frame, converts the recovered surface into an interior-filled volumetric domain, and couples it with a differentiable Material Point Method simulator. A Vision-Language Model provides physically grounded initialization of material parameters. The framework is optimized directly from the input video using only pixel-level reconstruction losses, including MSE and SSIM, enabling safe and efficient recovery of both force and material fields without proxy supervision. Experiments on synthetic and real-world scenes show that our method yields substantially more faithful physical reconstructions than force-only baselines, and further enables physics-aware video synthesis and editing under modified physical conditions. We envision this line of work as a step toward closing the loop between vision and observation.
     </p>
   </section>
 
