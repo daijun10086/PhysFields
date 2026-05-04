@@ -22,7 +22,7 @@
 
 A unified end-to-end differentiable framework that simultaneously recovers **force fields** and **material fields** from a single video. We combine a 3D Gaussian Splatting reconstruction of the first frame with a differentiable Material Point Method simulator, with material parameters initialized by a Vision-Language Model. The whole pipeline is optimized directly from the input video using only pixel-level reconstruction losses (MSE + SSIM) — no proxy supervision required.
 
-By **Jun Dai** and **Sheng Zhao** — Machine Vision Course Project, Tsinghua University.
+By **Jun Dai** and **Sheng Zhao** — Machine Vision Course Project, University of Rochester.
 
 ## Visit the Project Page
 
