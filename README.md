@@ -1,62 +1,49 @@
-# Project Webpage
+# PhysFields
 
-Minimal static project page, inspired by
-[convexsplatting.github.io](https://convexsplatting.github.io/) and the
-Nerfies / DreamFusion template.
+**See the Unseen from Single-view Videos**
 
-## Structure
+<p align="center">
+  <a href="https://daijun10086.github.io/PhysFields/">
+    <img src="https://img.shields.io/badge/Project_Page-PhysFields-2563eb?style=for-the-badge" alt="Project Page">
+  </a>
+  <a href="./static/pdfs/paper.pdf">
+    <img src="https://img.shields.io/badge/Paper-PDF-dc2626?style=for-the-badge" alt="Paper">
+  </a>
+  <a href="https://drive.google.com/file/d/1uL0nvQV1bc6cDp0pOed61He0wjQj3nJa/view?usp=sharing">
+    <img src="https://img.shields.io/badge/Video-Google_Drive-16a34a?style=for-the-badge" alt="Video">
+  </a>
+</p>
 
-```
-.
-├── index.html                  # Main page — all text uses *_PLACEHOLDER tokens
-├── static/
-│   ├── css/index.css           # Styles
-│   ├── images/                 # Placeholder SVGs (replace with your own assets)
-│   │   ├── tab-icon.png
-│   │   ├── teaser_placeholder.svg
-│   │   ├── pipeline_placeholder.svg
-│   │   ├── result_1_placeholder.svg …
-│   │   └── comparison_placeholder.svg
-│   ├── videos/                 # Put your teaser/results video here
-│   └── pdfs/                   # Put your report PDF here
-├── .nojekyll                   # Tells GitHub Pages to skip Jekyll
-└── README.md
-```
+<p align="center">
+  <img src="./static/images/teaser.png" alt="PhysFields teaser" width="100%">
+</p>
 
-## How to fill in content
+## About
 
-Open `index.html` and search for `PLACEHOLDER`. Every token that ends with
-`_PLACEHOLDER` is meant to be replaced with your real content (title, authors,
-abstract paragraph, captions, links, metrics, BibTeX fields, etc.).
+A unified end-to-end differentiable framework that simultaneously recovers **force fields** and **material fields** from a single video. We combine a 3D Gaussian Splatting reconstruction of the first frame with a differentiable Material Point Method simulator, with material parameters initialized by a Vision-Language Model. The whole pipeline is optimized directly from the input video using only pixel-level reconstruction losses (MSE + SSIM) — no proxy supervision required.
 
-For images/videos, either:
-- replace the placeholder files in `static/images/` / `static/videos/` with
-  files of the same name, **or**
-- edit the `src="..."` attribute in `index.html` to point to your new file.
+By **Jun Dai** and **Sheng Zhao** — Machine Vision Course Project, Tsinghua University.
 
-## Preview locally
+## Visit the Project Page
 
-```bash
-cd project_webpage
-python3 -m http.server 8000
-# then open http://localhost:8000
-```
+<p align="center">
+  <a href="https://daijun10086.github.io/PhysFields/">
+    <img src="./project_qr_with_logo.png" alt="QR code linking to the PhysFields project page" width="220">
+  </a>
+</p>
 
-## Deploy to GitHub Pages
+<p align="center">
+  Scan the QR code, or click <a href="https://daijun10086.github.io/PhysFields/"><strong>here</strong></a> to open the project page.
+</p>
 
-1. Create a new GitHub repository (e.g. `my-project-page`).
-2. From this directory, push the files:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial project page"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_USERNAME>/<REPO>.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Build and deployment → Source** = `Deploy from a branch`, **Branch** = `main` / `(root)`, then Save.
-4. Wait ~1 min. Your page will be live at
-   `https://<YOUR_USERNAME>.github.io/<REPO>/`.
+## Repository Contents
 
-> The `.nojekyll` file ensures GitHub Pages serves files under `static/` as-is
-> (otherwise Jekyll ignores folders starting with `_`).
+This repository hosts the source of the project page deployed via GitHub Pages. It contains:
+
+- `index.html` — the project page
+- `static/css/` — page styles
+- `static/images/` — teaser, pipeline figure, and result figures
+- `static/pdfs/` — the paper PDF
+- `static/ppt/` — presentation slide decks
+
+The source code of the method itself is maintained separately.
